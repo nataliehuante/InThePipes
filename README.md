@@ -6,6 +6,11 @@
 
 This repository contains game assets and design documentation for the project, including materials related to the game's concept, mechanics, art direction, and showcase submission.
 
+## Demo and Media
+
+- Trailer / showcase video: [In The Pipes Trailer](https://youtu.be/5gz01U9xEAU?si=nv3KGEZWlIMb0lmH)
+- [Playable demo link](https://play.unity.com/en/games/c1ab027c-11e6-4697-84df-7fefbcffc467/in-the-pipes-v02)
+  
 ## Gameplay Overview
 
 Players navigate sewer-themed levels using Sam's spider abilities, including running, jumping, wall movement, web swinging, rappelling, and web shooting. Along the way, players encounter enemies such as sewer rats, snakes, and bats, while also breaking crates, collecting coins, and unlocking customization options.
@@ -76,11 +81,6 @@ This repository may include:
 - Screenshots or thumbnails
 - Trailer/demo links
 - Asset credit documentation
-
-## Demo and Media
-
-- Trailer / showcase video: [In The Pipes Trailer](https://youtu.be/5gz01U9xEAU?si=nv3KGEZWlIMb0lmH)
-- [Playable demo link](https://play.unity.com/en/games/c1ab027c-11e6-4697-84df-7fefbcffc467/in-the-pipes-v02)
 
 ## Asset Credits
 
