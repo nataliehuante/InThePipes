@@ -1,0 +1,135 @@
+/* 
+Natalie Huante
+2374481
+huante@chapman.edu
+CPSC 340 - Game Development
+
+This file manages the UI elements during gameplay. These include the pause screen, 
+the in-play screen (containing stats such as player score, lives, etc.), the username-input 
+screen, and the damageTaken screen (aka Hurt Screen)
+*/
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+public class InPlayGameView : MonoBehaviour
+{
+    public CanvasGroup InGameCanvas;
+    public CanvasGroup PauseCanvas;
+    public CanvasGroup TestButtonsCanvas;
+    public CanvasGroup InputUsernameCanvas;
+    public CanvasGroup HurtCanvas;
+
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI LevelText;
+    public TextMeshProUGUI usernameText;
+
+    public Image heartOne;
+    public Image heartTwo;
+    public Image heartThree;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        ScoreText.text = "Score: 0000";
+        updateLives(3);
+    }
+
+    // Set the score 
+    public void setScoreText(int newScore) {
+        ScoreText.text = "Score: " + newScore;
+        // print("Score: " + newScore);
+    }
+
+    // Set the level
+    public void setLevelText(int newLevel) {
+        LevelText.text = "Level: " + newLevel;
+    }
+
+    // Set the username
+    public void setUsernameText(string playerName) {
+        usernameText.text = playerName;
+    }
+
+    // update the readouts
+    public void UpdateReadouts(int currentLevel, int currentScore) {
+        setLevelText(currentLevel);
+        setScoreText(currentScore);
+    }
+
+    // update lives
+    public void updateLives(int numOfLives) {
+        switch(numOfLives) {
+            case 1:
+                heartOne.enabled = true;
+                heartTwo.enabled = false;
+                heartThree.enabled = false;
+                break;
+            case 2: 
+                heartOne.enabled = true;
+                heartTwo.enabled = true;
+                heartThree.enabled = false;
+                break;
+            case 3:
+                heartOne.enabled = true;
+                heartTwo.enabled = true;
+                heartThree.enabled = true;
+                break;
+
+        }
+    }
+
+    public void ShowInGameCanvas() {
+        Show(InGameCanvas);
+        Hide(PauseCanvas);
+        Show(TestButtonsCanvas);
+        Hide(InputUsernameCanvas);
+        Hide(HurtCanvas);
+    }
+
+    public void ShowPauseScreen() {
+        Show(PauseCanvas);
+        Hide(InGameCanvas);
+        Hide(TestButtonsCanvas);
+        Hide(InputUsernameCanvas);
+        Hide(HurtCanvas);
+    }
+
+    public void ShowInputUsernameCanvas() {
+        Show(InputUsernameCanvas);
+        Hide(PauseCanvas);
+        Hide(InGameCanvas);
+        Hide(TestButtonsCanvas);
+        Hide(HurtCanvas);
+    }
+
+    public void ShowPlayerHurtCanvas() {
+        StartCoroutine(ShowHurtCanvas());
+    }
+
+
+    private void Show(CanvasGroup canvasGroup) {
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    private void Hide(CanvasGroup canvasGroup) {
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public IEnumerator ShowHurtCanvas()
+    {
+        Show(HurtCanvas);
+        yield return new WaitForSeconds((float)0.15);
+        Hide(HurtCanvas);
+    }
+
+
+    
+}
