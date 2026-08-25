@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ceiling
+  - Floor
+  - Water
+  - CompleteLevelTrigger
+  - PlayerFell
+  - CameraScrollTrigger
+  - Croc
+  - Snake
+  - Rat
+  - Bat
+  - CameraStopScrollingTrigger
+  - ShortWater
+  - Coin
+  - Heart
+  - Prop
+  - MultiplierCoin
+  - CoinMultiplier
+  - TidalWave
+  - Prop
+  - MapTrigger
+  - BedTrigger
+  - ShopTrigger
+  - MultiplierCoin_Batch1
+  - CoinMultiplier_Batch1
+  - MultiplierCoin_Batch2
+  - CoinMultiplier_Batch2
+  - MultiplierCoin_Batch3
+  - CoinMultiplier_Batch3
+  - MultiplierCoin_Batch4
+  - CoinMultiplier_Batch4
+  - MultiplierCoin_Batch5
+  - CoinMultiplier_Batch5
+  - LevelSelectTrigger
+  - CostumeShopTrigger
+  - WebShopTrigger
+  - Bullet
+  - ShortenGrappleStart
+  - ShortenGrappleEnd
+  - NPC1_InteractionTrigger
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Grappable
+  - Water
+  - UI
+  - Web
+  - Pivot
+  - Player
+  - Ground
+  - GrappablePull
+  - LineRenderer
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 983668053
+    locked: 0
